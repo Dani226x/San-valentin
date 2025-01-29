@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffebee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+h1 {
+    color: #e91e63;
+    font-size: 2rem;
+}
+
+.dedicatoria {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c2185b;
+}
+
+.hidden {
+    display: none;
+}
+
+#celebracion {
+    margin-top: 20px;
+}
+
+.corazones, .flores {
+    position: relative;
+    height: 100px;
+}
+
+.corazones::before, .corazones::after,
+.flores::before, .flores::after {
+    content: '❤️';
+    position: absolute;
+    font-size: 2rem;
+    animation: flotar 3s infinite;
+}
+
+.corazones::before {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.corazones::after {
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.flores::before {
+    content: '🌸';
+    left: 30%;
+    animation-delay: 0.5s;
+}
+
+.flores::after {
+    content: '🌺';
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.mensaje-final {
+    color: #e91e63;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
